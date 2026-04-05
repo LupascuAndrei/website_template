@@ -36,7 +36,7 @@ export default function Home() {
           </span>
 
           <h1 className="bg-gradient-to-br from-foreground via-foreground to-primary bg-clip-text text-6xl font-semibold tracking-tight text-transparent md:text-8xl">
-            salut, vladut
+            salut, andrei & vladut
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-muted-foreground md:text-xl">
