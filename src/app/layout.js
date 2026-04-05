@@ -1,10 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { EB_Garamond, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const ebGaramond = EB_Garamond({
+  variable: "--font-serif",
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -13,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "salut",
-  description: "salut — un site simplu, facut cu drag.",
+  title: "Casa Ciobi — Andrei & Vladut",
+  description:
+    "Casa Ciobi — un refugiu simplu si elegant, povestit de Andrei si Vladut.",
 };
 
 export default function RootLayout({ children }) {
@@ -22,13 +24,13 @@ export default function RootLayout({ children }) {
     <html
       lang="ro"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${ebGaramond.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body className="min-h-full flex flex-col bg-background text-foreground font-serif">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           {children}
